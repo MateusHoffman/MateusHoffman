@@ -1,5 +1,5 @@
-<h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Mateus</h1>
-<h3 align="center"><img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png"/>I'm a passionate Full Stack Web Developer from Brazil.<img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png"/></h3>
+<h1 align="center"><img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png"/>Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Mateus<img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png"/></h1>
+<h3 align="center">I'm a passionate Full Stack Web Developer from Brazil.</h3>
 
 
 ## 🚀 Languages and Tools:
