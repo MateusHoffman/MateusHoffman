@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png" align="center" margin-left="10px"/>Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Mateus<img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png" align="center" margin-right="10px"/></h1>
+<h1 align="center"><img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png" align="center"/>Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Mateus<img src="https://img.icons8.com/fluency/48/000000/brazil-circular.png" align="center"/></h1>
 <h3 align="center">I'm a passionate Full Stack Web Developer from Brazil.</h3>
 
 
@@ -54,8 +54,8 @@
 <p align="left">
 
 <a href = "https://www.linkedin.com/in/mateus-hoffman-04664b232/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
-<!-- <a href = "https://twitter.com/subhamraoniar"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a> -->
 <a href = "https://www.instagram.com/maahoffman/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+<!-- <a href = "https://twitter.com/subhamraoniar"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a> -->
 <!-- <a href = "https://www.youtube.com/channel/UC-NXT1lYAOPa3lrgWXqvuHA"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a> -->
 
 </p>
