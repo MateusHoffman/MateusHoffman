@@ -24,14 +24,6 @@
     <!-- <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> -->
 </p>
 
-##
-
-<div align="center">
-  <a href="https://github.com/MateusHoffman">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=MateusHoffman&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusHoffman&layout=compact&langs_count=7&theme=dracula"/>
-</div>
-
 ## 
 
 <div align="center">
