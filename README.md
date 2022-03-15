@@ -36,12 +36,14 @@
 
 <div>
 	<h3 align="center">SoftSkills:<h3>
-	<p align="center">Autocentrados, Empatia, Resiliência, Colaboração, Atenção para ouvir, Criatividade, Gerenciamento do tempo<p>
+	<p align="center">Empathy, Resilience, Collaboration, Good Listener, Creative, Time Management<p>
 </div>
 
 ##	
-		
+
+<div align="center">
 ![Snake animation](https://github.com/MateusHoffman/MateusHoffman/blob/output/github-contribution-grid-snake.svg)
+</div>
 
 ## Connect with me:
 <div align="center">
