@@ -32,9 +32,10 @@
 	</a>
 </div>
 
+<div>
 	<p align="center">SoftSkills:<p>
 	<h4 align="center">Autocentrados, Empatia, Resiliência, Colaboração, Atenção para ouvir, Criatividade, Gerenciamento do tempo<h4>
-
+</div>
 
 ![Snake animation](https://github.com/MateusHoffman/MateusHoffman/blob/output/github-contribution-grid-snake.svg)
 
