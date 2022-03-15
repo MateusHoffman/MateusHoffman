@@ -33,7 +33,7 @@
 </div>
 
 <div>
-	<p align="center">SoftSkills:<p>
+	<h3 align="center">SoftSkills:<h3>
 	<p align="center">Autocentrados, Empatia, Resiliência, Colaboração, Atenção para ouvir, Criatividade, Gerenciamento do tempo<p>
 </div>
 
