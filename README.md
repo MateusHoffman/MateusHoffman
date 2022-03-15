@@ -34,6 +34,8 @@
 
 <div>
 	<h2 align="center">SoftSkills:<h1>
+</div>
+<div>
 	<h4 align="center">Autocentrados, Empatia, Resiliência, Colaboração, Atenção para ouvir, Criatividade, Gerenciamento do tempo<h4>
 </div>
 
