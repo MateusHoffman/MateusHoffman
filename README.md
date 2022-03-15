@@ -63,4 +63,4 @@
 	<a href="https://github.com/MateusHoffman?tab=followers"><img src="https://img.shields.io/github/followers/MateusHoffman?label=Followers&style=social" alt="GitHub Badge"></a>
 </div>
 		
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<img src="https://platform.linkedin.com/badges/js/profile.js">
