@@ -41,9 +41,9 @@
 
 ##	
 
-<div align="center">
+
 ![Snake animation](https://github.com/MateusHoffman/MateusHoffman/blob/output/github-contribution-grid-snake.svg)
-</div>
+
 
 ## Connect with me:
 <div align="center">
