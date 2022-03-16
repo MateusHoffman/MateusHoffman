@@ -3,7 +3,7 @@
 <h3 align="center">I'm a passionate Full Stack Web Developer from Brazil.</h3>
 
 ##
-
+<p></p>
 <p align="center"> 
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/> </a> 
     <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a> 
@@ -25,7 +25,7 @@
 </p>
 
 ## 
-<br>
+
 <div align="center">
   <a href="https://github.com/MateusHoffman/github-readme-stats"><img height="165em" alt="Mateus Hoffman's Github Stats" src="https://github-readme-stats.vercel.app/api?username=MateusHoffman&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117" /></a>
   <a href="https://github.com/MateusHoffman/github-readme-stats"><img height="165em" alt="Mateus Hoffman's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusHoffman&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117"/>
