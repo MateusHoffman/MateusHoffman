@@ -58,9 +58,8 @@
 ## ❤ Views and Followers
 <div align="center">
 	<a href="https://github.com/Meghna-DAS/github-profile-views-counter">
-			<img src="https://komarev.com/ghpvc/?username=MateusHoffman">
+		<img src="https://komarev.com/ghpvc/?username=MateusHoffman">
 	</a>
-	<a href="https://github.com/MateusHoffman?tab=followers"><img src="https://img.shields.io/github/followers/MateusHoffman?label=Followers&style=social" alt="GitHub Badge"></a>
-	[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter&count_bg=%2379C83D&title_bg=%23001EFF&icon= draugiem-dot-lv.svg&icon_color=%23FFFFFF&title=Visitantes&edge_flat=false)](https://hits.seeyoufarm.com)
-</div>
+	<a href="https://github.com/MateusHoffman?tab=followers"><img src="https://img.shields.io/github/followers/MateusHoffman?label=Followers&style=social" 			alt="GitHub Badge"></a>
+	<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub .com%2Fgjbae1212%2Fhit-counter&count_bg=%2379C83D&title_bg=%23001EFF&icon=draugiem-dot-lv.svg&icon_color=%23FFFFFF&title=Visitantes&edge_flat=false"/></a></div>
 
