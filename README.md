@@ -1,4 +1,4 @@
-<h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="10px">, I'm Mateus</h1>
+<h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px">, I'm Mateus</h1>
 
 <h3 align="center">I'm a passionate Full Stack Web Developer from Brazil.</h3>
 
@@ -21,8 +21,12 @@
 ##
 
 <div>
-	<h3 align="center">SoftSkills:<h3>
-	<p align="center">Empathy, Resilience, Collaboration, Good Listener, Creative, Time Management<p>
+	<h3 align="center" fontsize="100px">
+		<img src="https://cdn-icons-png.flaticon.com/512/3062/3062533.png" width="50px" height="50px">
+		 My Soft Skills 
+		<img src="https://blog.peoplefirstps.com/hubfs/226%20-%20Data.png" width="50px" height="50px">
+	<h3>
+	<p align="center">Empathy, Resilience, Collaboration, Good Listener, Creative, Time Management, Self-knowledge, Challenges, Negotiation, Argumentation<p>
 </div>
 
 ##	
