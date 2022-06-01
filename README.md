@@ -21,12 +21,12 @@
 ##
 
 <div>
-	<h3 align="center" fontsize="100px">
+	<h3 align="center">
 		<img src="https://cdn-icons-png.flaticon.com/512/3062/3062533.png" width="50px" height="50px">
 		 My Soft Skills 
 		<img src="https://blog.peoplefirstps.com/hubfs/226%20-%20Data.png" width="50px" height="50px">
 	<h3>
-	<p align="center">Empathy, Resilience, Collaboration, Good Listener, Creative, Time Management, Self-knowledge, Challenges, Negotiation, Argumentation<p>
+	<h4 align="center">Empathy, Resilience, Collaboration, Good Listener, Creative, Time Management, Challenges, Argumentation<h4>
 </div>
 
 ##	
