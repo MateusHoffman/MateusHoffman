@@ -6,7 +6,7 @@
 
 <div id='lojc' align="center">
 
-| Tools  | Languages | Frameworks  | Technologies |  
+| Tools  | Languages | Frameworks  | Technologies | 
 |---|---|---|---|
 |<div id='lojc' align="center"><img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="" alt="J" width="30" height="30"/>&nbsp;&nbsp;<img src="https://github.com/MateusHoffman/MateusHoffman/blob/main/img/GitHub.svg" title="" alt="J" width="30" height="30" background-color="white"/>&nbsp;&nbsp;<img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" title="" alt="J" width="30" height="30"/></div>|<div id='lojc' align="center"><img src="https://github.com/MateusHoffman/MateusHoffman/blob/main/img/JavaScript.svg" title="" alt="J" width="30" height="30"/></div>|<div id='lojc' align="center"><img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" title="" alt="J" width="30" height="30"/></div>|<div id='lojc' align="center"><img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" title="" alt="J" width="30" height="30"/>&nbsp;&nbsp;<img src="https://github.com/MateusHoffman/MateusHoffman/blob/main/img/HTML.svg" title="" alt="J" width="30" height="30"/>&nbsp;&nbsp;<img src="https://github.com/MateusHoffman/MateusHoffman/blob/main/img/CSS.svg" title="" alt="J" width="30" height="30"/>&nbsp;&nbsp;<img src="https://github.com/MateusHoffman/MateusHoffman/blob/main/img/NPM.svg" title="" alt="J" width="30" height="30"/>&nbsp;&nbsp;<img src="https://github.com/MateusHoffman/MateusHoffman/blob/main/img/WordPress.svg" title="" alt="J" width="30" height="30"/></div></div>| 
 
