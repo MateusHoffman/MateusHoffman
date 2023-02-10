@@ -41,8 +41,6 @@
 ##	
 
 
-![snake gif](https://github.com/MateusHoffman/MateusHoffman/blob/output/github-contribution-grid-snake.gif)
-
 
 ## Connect with me:
 <div align="center">
