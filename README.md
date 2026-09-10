@@ -16,7 +16,7 @@
   <a href="https://www.linkedin.com/in/mateus-hoffman-04664b232/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </div>
 
-## ❤ Visualizações e seguidores
+## Visualizações e seguidores:
 <div align="center">
 	<a href="https://github.com/Meghna-DAS/github-profile-views-counter">
 		<img src="https://komarev.com/ghpvc/?username=MateusHoffman">
