@@ -1,0 +1,41 @@
+name: Daily Auto Commit
+
+on:
+  schedule:
+    # O Actions vai ser acionado todos os dias ao meio-dia (UTC)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite rodar manualmente na aba Actions
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Sorteio de 80% e Commit
+        run: |
+          # Gera um número aleatório entre 0 e 99
+          CHANCE=$(( RANDOM % 100 ))
+          echo "Número sorteado: $CHANCE (precisa ser menor que 80 para commitar)"
+
+          if [ $CHANCE -lt 80 ]; then
+            echo "✅ Sorteio aprovado (80%)! Preparando o commit..."
+            
+            # Altera o arquivo com a data atual
+            echo "Último commit automático gerado em: $(date)" > keep-alive.txt
+            
+            # Configura o Git e envia
+            git config --local user.email "mateushoffmandev@gmail.com"
+            git config --local user.name "Mateus Hoffman"
+            git add keep-alive.txt
+            git commit -m "chore: commit automático" || echo "Nenhuma mudança para commitar"
+            git push
+            
+            echo "🚀 Push realizado com sucesso!"
+          else
+            echo "❌ Sorteio negado (20%). O commit de hoje foi pulado para parecer mais natural."
+          fi
