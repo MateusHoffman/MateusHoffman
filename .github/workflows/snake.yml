@@ -16,15 +16,15 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Gerar a animação da cobrinha (Snake) em tons de laranja
+      - name: Gerar a animação da cobrinha (Snake) em Amarelo/Laranja
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: MateusHoffman
           outputs: |
-            # MODO CLARO: Cobra Azul, Quadrados Laranja (máximo vibrante)
-            dist/github-contribution-grid-snake.svg?color_snake=#005bcf&color_dots=#ebedf0,#ffe0b2,#ffb74d,#ffa726,#f57c00
-            # MODO ESCURO: Cobra Azul Clara, Quadrados Laranja Escuros (adaptados)
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#429aff&color_dots=#161b22,#5e3c0c,#9d6414,#c7801a,#ef9b1f
+            # MODO CLARO: Cobra Azul, Quadrados Amarelo Claro -> Laranja Vibrante
+            dist/github-contribution-grid-snake.svg?color_snake=#005bcf&color_dots=#ebedf0,#fff59d,#ffd54f,#ffb300,#fb8c00
+            # MODO ESCURO: Cobra Azul Clara, Quadrados Amarelo Claro -> Laranja Vibrante
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#429aff&color_dots=#161b22,#fff59d,#ffd54f,#ffb300,#fb8c00
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
