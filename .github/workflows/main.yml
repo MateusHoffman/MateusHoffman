@@ -1,41 +1,30 @@
-name: generate animation
+name: Daily Auto Commit
 
 on:
-  # run automatically every 12 hours
   schedule:
-    - cron: "0 */12 * * *" 
-  
-  # allows to manually run the job at any time
-  workflow_dispatch:
-  
-  # run on every push on the master branch
-  push:
-    branches:
-    - master
-    
-  
+    # Roda todos os dias ao meio-dia (UTC)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite que você clique em "Run workflow" para testar manualmente
 
 jobs:
-  generate:
+  auto-commit:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
-    steps:
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
-      - name: generate github-contribution-grid-snake.svg
-        uses: Platane/snk/svg-only@v2
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+    permissions:
+      contents: write # Permissão obrigatória para o GitHub Actions poder fazer o push
 
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push github-contribution-grid-snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Fazer uma alteração no arquivo
+        run: |
+          # Cria ou atualiza um arquivo chamado keep-alive.txt com a data atual
+          echo "Último commit automático gerado em: $(date)" > keep-alive.txt
+
+      - name: Configurar o Git e fazer o Commit
+        run: |
+          git config --local user.email "mateushoffmandev@gmail.com"
+          git config --local user.name "Mateus Hoffman"
+          git add keep-alive.txt
+          git commit -m "chore: commit automático" || echo "Nenhuma mudança para commitar"
+          git push
