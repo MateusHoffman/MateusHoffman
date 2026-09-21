@@ -10,21 +10,21 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permissão para o bot salvar a imagem na branch output
+      contents: write
     
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Gerar a animação da cobrinha (Snake) em Amarelo/Laranja
+      - name: Gerar a animação da cobrinha (Snake) com cores personalizadas
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: MateusHoffman
           outputs: |
-            # MODO CLARO: Cobra Azul, Quadrados Amarelo Claro -> Laranja Vibrante
-            dist/github-contribution-grid-snake.svg?color_snake=#005bcf&color_dots=#ebedf0,#fff59d,#ffd54f,#ffb300,#fb8c00
-            # MODO ESCURO: Cobra Azul Clara, Quadrados Amarelo Claro -> Laranja Vibrante
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#429aff&color_dots=#161b22,#fff59d,#ffd54f,#ffb300,#fb8c00
+            # MODO CLARO: Fundo padrão, do laranja claro (#FFC4A8) ao vibrante (#FF5F1F)
+            dist/github-contribution-grid-snake.svg?color_snake=#005bcf&color_dots=#ebedf0,#FFC4A8,#FFA473,#FF8545,#FF5F1F
+            # MODO ESCURO: Fundo escuro, do laranja claro (#FFC4A8) ao vibrante (#FF5F1F)
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#429aff&color_dots=#161b22,#FFC4A8,#FFA473,#FF8545,#FF5F1F
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
