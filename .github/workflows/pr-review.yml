@@ -52,12 +52,7 @@ jobs:
             exit 1
           fi
 
-          status=$(echo "$body" | python3 -c 'import json,sys
-try:
-    d = json.load(sys.stdin)
-    print(d.get("completion", {}).get("status", "unknown"))
-except Exception:
-    print("parse-error")')
+          status=$(echo "$body" | python3 -c 'import json,sys; d = json.load(sys.stdin); print(d.get("completion", {}).get("status", "unknown"))' 2>/dev/null || echo "parse-error")
 
           echo "Completion status: ${status}"
 
