@@ -1,0 +1,69 @@
+name: OpenClaw PR Review
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions: {}
+
+concurrency:
+  group: openclaw-pr-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: [self-hosted, openclaw-pr-reviewer]
+    timeout-minutes: 12
+    steps:
+      - name: Trigger OpenClaw pr-reviewer agent
+        env:
+          HOOK_TOKEN: ${{ secrets.OPENCLAW_HOOK_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+
+          message="owner=${OWNER} repo=${REPO} pr_number=${PR_NUMBER} head_sha=${HEAD_SHA} base_sha=${BASE_SHA} action=opened"
+          session_key="pr:${OWNER}/${REPO}:${PR_NUMBER}"
+
+          payload=$(printf '{"agentId":"pr-reviewer","message":%s,"sessionKey":%s,"sessionMode":"isolated","timeoutSeconds":600,"waitForCompletion":true,"deliver":false}' \
+            "$(printf '%s' "$message" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')" \
+            "$(printf '%s' "$session_key" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')")
+
+          echo "Calling OpenClaw hook for ${session_key}"
+
+          http_response=$(curl -sS -w '\n%{http_code}' -X POST "http://127.0.0.1:18789/hooks/agent" \
+            -H "Authorization: Bearer ${HOOK_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --max-time 660 \
+            -d "$payload")
+
+          http_code=$(echo "$http_response" | tail -n1)
+          body=$(echo "$http_response" | sed '$d')
+
+          echo "HTTP status: ${http_code}"
+          echo "Response body: ${body}"
+
+          if [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+            echo "::error::Hook request failed with HTTP ${http_code}"
+            exit 1
+          fi
+
+          status=$(echo "$body" | python3 -c 'import json,sys
+try:
+    d = json.load(sys.stdin)
+    print(d.get("completion", {}).get("status", "unknown"))
+except Exception:
+    print("parse-error")')
+
+          echo "Completion status: ${status}"
+
+          if [ "$status" != "ok" ]; then
+            echo "::error::PR review did not complete successfully (status=${status})"
+            exit 1
+          fi
+
+          echo "PR review completed successfully."
