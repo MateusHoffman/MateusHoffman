@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   review:
-    runs-on: [self-hosted, openclaw-pr-reviewer]
+    runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - name: Trigger OpenClaw pr-reviewer agent
@@ -35,7 +35,7 @@ jobs:
 
           echo "Calling OpenClaw hook for ${session_key}"
 
-          http_response=$(curl -sS -w '\n%{http_code}' -X POST "http://127.0.0.1:18789/hooks/agent" \
+          http_response=$(curl -sS -w '\n%{http_code}' -X POST "https://krill-sought-hopefully.ngrok-free.app/hooks/agent" \
             -H "Authorization: Bearer ${HOOK_TOKEN}" \
             -H "Content-Type: application/json" \
             --max-time 660 \
