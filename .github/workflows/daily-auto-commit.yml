@@ -2,9 +2,8 @@ name: Daily Auto Commit
 
 on:
   schedule:
-    # O Actions vai ser acionado todos os dias ao meio-dia (UTC)
     - cron: '0 12 * * *'
-  workflow_dispatch: # Permite rodar manualmente na aba Actions
+  workflow_dispatch: 
 
 jobs:
   auto-commit:
@@ -16,26 +15,50 @@ jobs:
       - name: Checkout do Repositório
         uses: actions/checkout@v4
 
-      - name: Sorteio de 80% e Commit
+      - name: Sorteios e Commits
         run: |
-          # Gera um número aleatório entre 0 e 99
-          CHANCE=$(( RANDOM % 100 ))
-          echo "Número sorteado: $CHANCE (precisa ser menor que 80 para commitar)"
+          # 1. Sorteio de Execução (70% de chance de rodar)
+          RUN_CHANCE=$(( RANDOM % 100 ))
+          echo "Número do sorteio principal: $RUN_CHANCE"
 
-          if [ $CHANCE -lt 80 ]; then
-            echo "✅ Sorteio aprovado (80%)! Preparando o commit..."
-            
-            # Altera o arquivo com a data atual
-            echo "Último commit automático gerado em: $(date)" > keep-alive.txt
-            
-            # Configura o Git e envia
-            git config --local user.email "mateushoffmandev@gmail.com"
-            git config --local user.name "Mateus Hoffman"
-            git add keep-alive.txt
-            git commit -m "chore: commit automático" || echo "Nenhuma mudança para commitar"
-            git push
-            
-            echo "🚀 Push realizado com sucesso!"
-          else
-            echo "❌ Sorteio negado (20%). O commit de hoje foi pulado para parecer mais natural."
+          if [ $RUN_CHANCE -ge 70 ]; then
+            echo "❌ Sorteio nível 1 (30%). O commit de hoje foi pulado para parecer natural."
+            exit 0
           fi
+          
+          echo "✅ Sorteio nível 1 aprovado (70%)! Decidindo a quantidade de commits..."
+
+          # 2. Sorteio de Quantidade de Commits
+          COMMIT_CHANCE=$(( RANDOM % 100 ))
+          
+          if [ $COMMIT_CHANCE -lt 65 ]; then
+            NUM_COMMITS=1
+            echo "🎯 Probabilidade (65%): Fará 1 commit."
+          elif [ $COMMIT_CHANCE -lt 85 ]; then
+            NUM_COMMITS=4
+            echo "🎯 Probabilidade (20%): Farão 4 commits."
+          elif [ $COMMIT_CHANCE -lt 95 ]; then
+            NUM_COMMITS=8
+            echo "🎯 Probabilidade (10%): Farão 8 commits."
+          else
+            NUM_COMMITS=11
+            echo "🎯 Probabilidade (5%): Farão 11 commits."
+          fi
+
+          # 3. Execução dos Commits
+          git config --local user.email "mateushoffmandev@gmail.com"
+          git config --local user.name "Mateus Hoffman"
+
+          for i in $(seq 1 $NUM_COMMITS); do
+            echo "Último commit automático gerado em: $(date) - Commit $i de $NUM_COMMITS" > keep-alive.txt
+            
+            git add keep-alive.txt
+            git commit -m "chore: commit automático ($i/$NUM_COMMITS)" || echo "Nenhuma mudança para commitar na iteração $i"
+            
+            # Adiciona um pequeno atraso de 1 segundo para garantir que a data/hora mude entre commits rápidos
+            sleep 2 
+          done
+          
+          git push
+          
+          echo "🚀 $NUM_COMMITS commit(s) enviado(s) com sucesso!"
