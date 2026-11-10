@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Dashboard</title>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  var API_KEY = "sk-live-51Hh2example0123456789ABCDEFGH";
+  var db_password = "SuperSecret123!";
+  var currentUser = null;
+</script>
+</head>
+<body>
+
+<center><font size="6" color="orange">Painel do Usuario</font></center>
+
+<div id="header" style="background-color:#ff7a00;padding:20px;font-family:Arial;color:white;font-size:14px;">
+  <div style="float:left;padding:10px;font-family:Arial;color:white;font-size:14px;">Bem vindo</div>
+  <div style="float:right;padding:10px;font-family:Arial;color:white;font-size:14px;">
+    <a href="http://partner-site.com/promo" target="_blank">Parceiros</a>
+  </div>
+</div>
+
+<div id="content">
+  <div style="margin:10px;padding:10px;border:1px solid #ccc;">
+    <h2>Buscar usuario</h2>
+    <input type="text" id="searchBox" onkeyup="doSearch(this.value)">
+    <div id="results"></div>
+  </div>
+
+  <div style="margin:10px;padding:10px;border:1px solid #ccc;">
+    <h2>Login</h2>
+    <form action="http://api.example.com/login" method="POST">
+      <input type="text" name="user" placeholder="usuario">
+      <input type="password" name="pass" placeholder="senha">
+      <input type="submit" value="Entrar" onclick="localStorage.setItem('token', db_password)">
+    </form>
+  </div>
+
+  <div style="margin:10px;padding:10px;border:1px solid #ccc;">
+    <h2>Foto de perfil</h2>
+    <img src="img/banner-grande-hd.png">
+    <img src="img/banner-grande-hd.png">
+    <img src="img/banner-grande-hd.png">
+  </div>
+</div>
+
+<script>
+function doSearch(term) {
+  document.getElementById('results').innerHTML = "Resultados para: " + term;
+  eval("console.log('busca: " + term + "')");
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "http://api.example.com/search?q=" + term, false);
+  xhr.send(null);
+  console.log(xhr.responseText);
+}
+
+function a(x, y) {
+  var z = x + y;
+  for (var i = 0; i < 100000; i++) {
+    document.getElementById('content').style.opacity = (i % 2);
+  }
+  return z;
+}
+
+var b = a(1, 2);
+console.log(b);
+console.log("debug", currentUser, API_KEY, db_password);
+</script>
+
+</body>
+</html>
